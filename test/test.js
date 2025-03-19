@@ -21,7 +21,7 @@ const reportportalClientMock = {
 RPClient.mockImplementation(() => reportportalClientMock);
 
 beforeAll(() => {
-  process.env.REPORT_PORTAL_TOKEN = 'REPORT_PORTAL_TOKEN';
+  process.env.REPORT_PORTAL_API_KEY = 'REPORT_PORTAL_API_KEY';
   process.env.REPORT_PORTAL_BASE_URL = 'http://localhost:8081';
   process.env.REPORT_PORTAL_LAUNCH_NAME = 'REPORT_PORTAL_LAUNCH_NAME';
   process.env.REPORT_PORTAL_PROJECT_NAME = 'REPORT_PORTAL_PROJECT_NAME';

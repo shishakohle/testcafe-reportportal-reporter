@@ -4,7 +4,7 @@ const RPClient = require('@reportportal/client-javascript');
 class ReportPortalService {
   constructor() {
     this.rpClient = new RPClient({
-      token: process.env.REPORT_PORTAL_TOKEN,
+      apiKey: process.env.REPORT_PORTAL_API_KEY,
       endpoint: `${process.env.REPORT_PORTAL_BASE_URL}/api/v1`,
       launch: process.env.REPORT_PORTAL_LAUNCH_NAME,
       project: process.env.REPORT_PORTAL_PROJECT_NAME,

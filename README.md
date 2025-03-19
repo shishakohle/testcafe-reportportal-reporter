@@ -31,13 +31,14 @@ npm install testcafe-reporter-report-portal-reporter
 ## Setup
 Once installed add required env variables to use the plugin. Good idea is to use [env-cmd](https://github.com/toddbluhm/env-cmd) or [dot-env](https://github.com/motdotla/dotenv) to simplify the setup.
 
-| Required | Argument                      | Description                                                         | Example                              |
-| -------- | ----------------------------- | ------------------------------------------------------------------- | ------------------------------------ |
-| Yes      | REPORT_PORTAL_BASE_URL        | url of report portal instance including protocol and port           | http://<IP_ADDRESS>:8080             |
-| Yes      | REPORT_PORTAL_TOKEN           | can be taken from report portal -> user profile -> access token     | d19fb675-5ebc-4104-a6c7-fc44e18d27de |
-| Yes      | REPORT_PORTAL_PROJECT_NAME    | need to match project name in report portal                         | superadmin_personal                  |
-| Yes      | REPORT_PORTAL_LAUNCH_NAME     | Name that identifies this test run                                  | Sanity                               |
-| No       | REPORT_PORTAL_DESCRIPTION     | additional information about the launch                             | Some custom description              |
+| Required   | Argument                      | Description                                                         | Example                              |
+| ---------- | ----------------------------- | ------------------------------------------------------------------- | ------------------------------------ |
+| Yes        | REPORT_PORTAL_BASE_URL        | url of report portal instance including protocol and port           | http://<IP_ADDRESS>:8080             |
+| Yes        | REPORT_PORTAL_API_KEY         | can be taken from report portal -> user profile -> access token     | d19fb675-5ebc-4104-a6c7-fc44e18d27de |
+| Yes        | REPORT_PORTAL_PROJECT_NAME    | need to match project name in report portal                         | superadmin_personal                  |
+| Yes        | REPORT_PORTAL_LAUNCH_NAME     | Name that identifies this test run                                  | Sanity                               |
+| No         | REPORT_PORTAL_DESCRIPTION     | additional information about the launch                             | Some custom description              |
+| deprecated | REPORT_PORTAL_TOKEN           | *deprecated* Use `apiKey` instead.                                  | *deprecated*                         |
 
 ## Usage
 When you run tests from the command line, specify the reporter name by using the `--reporter` option:
